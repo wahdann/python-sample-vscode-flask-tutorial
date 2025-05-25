@@ -8,8 +8,13 @@ pipeline{
     stages{
         stage("build Docker image"){
             steps{
-                sh "echo "${XYZ}""
+                sh "echo '${XYZ}'"
                 sh "docker build -t python:v${BUILD_NUMBER} ."
+            }
+        }
+        stage("build Docker image"){
+            steps{
+                sh 'echo '${XYZ}''
             }
         }
     }
