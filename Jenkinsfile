@@ -11,7 +11,7 @@ pipeline{
                 sh "docker build -t itiv4/data-iti:v${BUILD_NUMBER} ."
             }
         }
-        stage("build Docker image"){
+        stage("Push Docker image"){
             steps{
                 sh "docker push itiv4/data-iti:v${BUILD_NUMBER}"
             }
