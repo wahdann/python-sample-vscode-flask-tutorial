@@ -1,19 +1,17 @@
 pipeline{
     agent{
-        label "java"
-    }
-    environment{
-        XYZ='ITI ITI ITI'
+        label "newAgent"
     }
     stages{
-        stage("build Docker image"){
+        stage("Build Docker image"){
             steps{
-                sh "docker build -t itiv4/data-iti:v${BUILD_NUMBER} ."
+                sh "echo 'Building the image' "
+                sh "docker build -t wahdann/cicdlab2:v${BUILD_NUMBER} ."
             }
         }
-        stage("Push Docker image"){
+        stage("Push Docker image to Dockerhub"){
             steps{
-                sh "docker push itiv4/data-iti:v${BUILD_NUMBER}"
+                sh "docker push wahdann/cicdlab2:v${BUILD_NUMBER}"
             }
         }
     }
