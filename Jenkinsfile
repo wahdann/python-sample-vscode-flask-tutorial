@@ -3,9 +3,6 @@ pipeline{
     agent{
         label "java"    }
     environment{
-        XYZ='ITI ITI ITI'
-    }
-    environment{
         DOCKER_USER = credentials('dockerhub-user')
         DOCKER_PASS = credentials('dockerhub-password')
     }
