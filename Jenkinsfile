@@ -3,7 +3,7 @@
 
 pipeline{
     agent{
-        label "java"
+        label "newAgent"
     }
     environment{
         DOCKER_USER = credentials('dockerhub-user')
