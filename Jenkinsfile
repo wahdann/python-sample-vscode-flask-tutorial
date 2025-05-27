@@ -1,5 +1,5 @@
 @Library('libx@main')_
-call_python()
+forpython()
 // @Library('libx')_
 
 
